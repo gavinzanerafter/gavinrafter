@@ -17,7 +17,7 @@ const TagTemplate: React.FC<Props> = ({data, pageContext}) => {
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <Layout title={siteTitle}>
+    <Layout title={siteTitle} back={`/tags/`}>
       <Head title={`Posts tagged "${tag}"`} keywords={[`blog`, `gatsby`, `javascript`, `react`, tag]} />
       <article>
         <header>
@@ -57,6 +57,7 @@ interface PageQueryData {
           slug: string
         }
         frontmatter: {
+          summary: string
           date: string
           title: string
         }
@@ -76,12 +77,13 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
-          excerpt(pruneLength: 2500)
+          excerpt(pruneLength: 2000)
           fields {
             slug
           }
           frontmatter {
             date
+            summary
             title
           }
         }

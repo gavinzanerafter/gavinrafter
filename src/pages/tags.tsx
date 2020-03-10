@@ -13,7 +13,7 @@ const Tags: React.FC<Props> = ({data}) => {
   const group = data.allMarkdownRemark && data.allMarkdownRemark.group
 
   return (
-    <Layout title={siteTitle}>
+    <Layout title={siteTitle} back={`/`}>
       <Head title="All tags" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
       <article>
         <h1>All tags</h1>

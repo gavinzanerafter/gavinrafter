@@ -1,40 +1,40 @@
-import React from 'react'
-import {graphql} from 'gatsby'
+// import React from 'react'
+// import {graphql} from 'gatsby'
 
-import Layout from '../components/layout'
-import Head from '../components/head'
+// import Layout from '../components/layout'
+// import Head from '../components/head'
 
-interface Props {
-  readonly data: PageQueryData
-}
+// interface Props {
+//   readonly data: PageQueryData
+// }
 
-const About: React.FC<Props> = ({data}) => {
-  const siteTitle = data.site.siteMetadata.title
+// const About: React.FC<Props> = ({data}) => {
+//   const siteTitle = data.site.siteMetadata.title
 
-  return (
-    <Layout title={siteTitle}>
-      <Head title="All tags" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
-      <article>About Gavin Rafter...</article>
-    </Layout>
-  )
-}
+//   return (
+//     <Layout title={siteTitle}>
+//       <Head title="All tags" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+//       <article>Gavin Rafter</article>
+//     </Layout>
+//   )
+// }
 
-interface PageQueryData {
-  site: {
-    siteMetadata: {
-      title: string
-    }
-  }
-}
+// interface PageQueryData {
+//   site: {
+//     siteMetadata: {
+//       title: string
+//     }
+//   }
+// }
 
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
+// export const pageQuery = graphql`
+//   query {
+//     site {
+//       siteMetadata {
+//         title
+//       }
+//     }
+//   }
+// `
 
-export default About
+// export default About

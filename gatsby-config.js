@@ -3,8 +3,8 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'All Blogs | Gavin Rafter',
-    description: 'Cool blogs for cool things!',
+    title: 'Gavin Rafter',
+    description: 'How tos and About things.',
     siteUrl: 'https://gavinrafter.com',
     author: {
       name: 'Gavin Rafter',

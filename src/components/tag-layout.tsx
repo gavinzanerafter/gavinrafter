@@ -1,7 +1,6 @@
 import React from 'react'
 import {Link} from 'gatsby'
 import {GlobalStyle, styled} from '../styles/theme'
-import {reduceEachLeadingCommentRange} from 'typescript'
 
 const StyledNav = styled.nav`
   ul {
@@ -25,15 +24,14 @@ const StyledFooter = styled.footer`
 `
 
 interface Props {
-  readonly back?: string
   readonly title?: string
   readonly children: React.ReactNode
 }
 
-const Layout: React.FC<Props> = ({children, back}) => (
+const TagLayout: React.FC<Props> = ({children}) => (
   <>
     <GlobalStyle />
-    <StyledNav className="navigation" style={{marginTop: '23px'}}>
+    <StyledNav className="navigation">
       <ul>
         <li>
           <Link to={`/`}>Main Page</Link>
@@ -41,11 +39,9 @@ const Layout: React.FC<Props> = ({children, back}) => (
         <li>
           <Link to={`/tags`}>Tags</Link>
         </li>
-        {back && (
-          <li style={{float: 'right', marginTop: '16px'}}>
-            <Link to={back}>Back→</Link>
-          </li>
-        )}
+        <li style={{float: 'right'}}>
+          <Link to={`/tags/`}>Back→</Link>
+        </li>
         {/* <li>
           <Link to={`/about`}>About</Link>
         </li> */}
@@ -58,11 +54,9 @@ const Layout: React.FC<Props> = ({children, back}) => (
       © {new Date().getFullYear()},{` `}
       <a href="https://gavinrafter.com">gavinrafter.com</a>. Built with
       {` `}
-      <a href="https://www.gatsbyjs.org">Gatsby</a>. Also check out:
-      {` `}
-      <a href="https://www.jeffrafter.com/">jeffrafter.com</a>.
+      <a href="https://www.gatsbyjs.org">Gatsby</a>
     </StyledFooter>
   </>
 )
 
-export default Layout
+export default TagLayout

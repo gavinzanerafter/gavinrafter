@@ -61,8 +61,8 @@ body {
   margin-right: auto;
   padding-left: 12.5%;
   font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
-  background-color: white;
-  color: #111;
+  background-color: rgb(254,254,254);
+  color: black;
   max-width: 1400px;
 }
 
