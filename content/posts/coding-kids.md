@@ -1,7 +1,7 @@
 ---
 title: Coding for kids
 date: '2019-05-25'
-published: false
+published: true
 layout: post
 tags: ['coding', 'young', 'scratch', 'tynker', 'code.org']
 category: example
