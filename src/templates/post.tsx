@@ -42,14 +42,14 @@ const PostTemplate: React.FC<Props> = ({data, pageContext}) => {
           <StyledUl>
             {previous && (
               <li>
-                <Link to={previous.fields.slug} rel="prev">
+                <Link to={`/blogs/${previous.fields.slug}`} rel="prev">
                   ← {previous.frontmatter.title}
                 </Link>
               </li>
             )}
             {next && (
               <li>
-                <Link to={next.fields.slug} rel="next">
+                <Link to={`/blogs/${next.fields.slug}`} rel="next">
                   {next.frontmatter.title} →
                 </Link>
               </li>

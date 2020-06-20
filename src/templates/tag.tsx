@@ -29,7 +29,7 @@ const TagTemplate: React.FC<Props> = ({data, pageContext}) => {
             return (
               <div key={node.fields.slug}>
                 <h3>
-                  <Link to={node.fields.slug}>{title}</Link>
+                  <Link to={`/blogs/${node.fields.slug}`}>{title}</Link>
                 </h3>
                 <small>{node.frontmatter.date}</small>
                 <p dangerouslySetInnerHTML={{__html: node.excerpt}} />
